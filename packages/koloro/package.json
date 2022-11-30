@@ -1,0 +1,25 @@
+{
+  "name": "koloro",
+  "version": "0.0.0",
+  "homepage": "https://github.com/neetly/koloro",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:neetly/koloro.git",
+    "directory": "packages/koloro"
+  },
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "files": [
+    "./lib"
+  ],
+  "scripts": {
+    "build": "buncho library build",
+    "clean": "buncho library clean",
+    "prepack": "run clean && run build && cp ../../LICENSE ."
+  },
+  "devDependencies": {
+    "@neetly/tsconfig": "^0.2.0",
+    "buncho": "^6.0.2",
+    "typescript": "^4.9.3"
+  }
+}

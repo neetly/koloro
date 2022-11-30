@@ -1,0 +1,13 @@
+# Yarn
+
+**/node_modules/
+/.yarn/
+/.pnp.*
+
+# Artifacts
+
+**/*.tsbuildinfo
+/packages/*/lib/
+/packages/*/LICENSE
+/websites/*/lib/
+/websites/*/build/

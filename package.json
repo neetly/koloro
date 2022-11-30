@@ -1,0 +1,30 @@
+{
+  "name": "@koloro/repo",
+  "private": true,
+  "workspaces": [
+    "./packages/*",
+    "./websites/*"
+  ],
+  "homepage": "https://github.com/neetly/koloro",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:neetly/koloro.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn workspaces foreach --topological-dev run build",
+    "clean": "yarn workspaces foreach --topological-dev run clean",
+    "lint": "eslint --max-warnings 0 . && prettier --check .",
+    "lint:fix": "eslint --max-warnings 0 --fix . && prettier --write .",
+    "publish": "yarn workspaces foreach --no-private npm publish --tolerate-republish"
+  },
+  "devDependencies": {
+    "@neetly/eslint-config": "^0.3.2",
+    "@neetly/tsconfig": "^0.2.0",
+    "@prettier/plugin-xml": "^2.2.0",
+    "eslint": "^8.28.0",
+    "prettier": "^2.8.0",
+    "typescript": "^4.9.3"
+  },
+  "packageManager": "yarn@4.0.0-rc.31"
+}

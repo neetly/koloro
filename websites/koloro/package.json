@@ -1,0 +1,28 @@
+{
+  "name": "@koloro/website",
+  "private": true,
+  "homepage": "https://github.com/neetly/koloro",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:neetly/koloro.git",
+    "directory": "websites/koloro"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "buncho start",
+    "build": "buncho build",
+    "clean": "buncho clean"
+  },
+  "dependencies": {
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "koloro": "workspace:^",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@neetly/tsconfig": "^0.2.0",
+    "buncho": "^6.0.2",
+    "typescript": "^4.9.3"
+  }
+}

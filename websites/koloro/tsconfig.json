@@ -1,0 +1,14 @@
+{
+  "extends": "@neetly/tsconfig",
+
+  "include": ["./src"],
+
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./lib",
+
+    "types": ["buncho/env"]
+  },
+
+  "references": [{ "path": "../../packages/koloro" }]
+}
