@@ -3213,6 +3213,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"colorjs.io@patch:colorjs.io@npm:^0.4.2#./patches/colorjs.io.patch::locator=%40koloro%2Frepo%40workspace%3A.":
+  version: 0.4.2
+  resolution: "colorjs.io@patch:colorjs.io@npm%3A0.4.2#./patches/colorjs.io.patch::version=0.4.2&hash=a27ed6&locator=%40koloro%2Frepo%40workspace%3A."
+  checksum: 70c1e35409ea496767c6d2a1f2a00f387a96f35d816d6c16a4bdbf18f319dcbcfb92f70c6f26c2bbb0b3d0e6d1a7cffe871b6834e85b5367c93d1d69f66f8c87
+  languageName: node
+  linkType: hard
+
 "commander@npm:^2.20.0":
   version: 2.20.3
   resolution: "commander@npm:2.20.3"

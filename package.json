@@ -26,5 +26,8 @@
     "prettier": "^2.8.0",
     "typescript": "^4.9.3"
   },
+  "resolutions": {
+    "colorjs.io@^0.4.2": "patch:colorjs.io@npm:^0.4.2#./patches/colorjs.io.patch"
+  },
   "packageManager": "yarn@4.0.0-rc.32"
 }
