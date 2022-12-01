@@ -29,7 +29,7 @@ $$
 $$
 \begin{align*}
 L_{Oklab} & = \begin{cases}
-  \dfrac {L_{Koloro} + 1.16} {1.16} , & L_{Koloro} \gt 0.08 \\
+  \dfrac {L_{Koloro} + 0.16} {1.16} , & L_{Koloro} \gt 0.08 \\
   \delta \left( \dfrac {L_{Koloro}} {0.08} \right) ^ {\tfrac{1}{3}} , & L_{Koloro} \le 0.08 \\
 \end{cases} \\
 a_{Oklab} & = a_{Koloro} \\
