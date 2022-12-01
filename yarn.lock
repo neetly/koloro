@@ -3206,6 +3206,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"colorjs.io@npm:^0.4.2":
+  version: 0.4.2
+  resolution: "colorjs.io@npm:0.4.2"
+  checksum: dba8bfb16ddb4921d8f7eade365d90dc85179489469a6f84ce12d71e288df81156b8370eaac988b3c634339666160d0ac0985654b18cfd4f817abdc9a7a85cd9
+  languageName: node
+  linkType: hard
+
 "commander@npm:^2.20.0":
   version: 2.20.3
   resolution: "commander@npm:2.20.3"
@@ -5571,7 +5578,10 @@ __metadata:
   dependencies:
     "@neetly/tsconfig": "npm:^0.2.0"
     buncho: "npm:^6.0.2"
+    colorjs.io: "npm:^0.4.2"
     typescript: "npm:^4.9.3"
+  peerDependencies:
+    colorjs.io: "*"
   languageName: unknown
   linkType: soft
 
