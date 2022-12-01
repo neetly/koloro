@@ -3,6 +3,46 @@
 [![CI](https://github.com/neetly/koloro/actions/workflows/ci.yml/badge.svg)](https://github.com/neetly/koloro/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/koloro)](https://www.npmjs.com/package/koloro)
 
+## Colorspace
+
+### Oklab to Koloro
+
+$$
+\begin{align*}
+L_{Koloro} & = \begin{cases}
+  1.16 L_{Oklab} - 0.16 , & L_{Oklab} \gt \delta \\
+  \displaystyle 0.08 \left( \frac {L_{Oklab}} {\delta} \right) ^ {3} , & L_{Oklab} \le \delta \\
+\end {cases} \\
+a_{Koloro} & = a_{Oklab} \\
+b_{Koloro} & = b_{Oklab} \\
+\end{align*}
+$$
+
+where
+
+$$
+\delta = \frac{24}{116}
+$$
+
+### Koloro to Oklab
+
+$$
+\begin{align*}
+L_{Oklab} & = \begin{cases}
+  \displaystyle \frac {L_{Koloro} + 1.16} {1.16} , & L_{Koloro} \gt 0.08 \\
+  \displaystyle \delta \left( \frac {L_{Koloro}} {0.08} \right) ^ {\frac{1}{3}} , & L_{Koloro} \le 0.08 \\
+\end{cases} \\
+a_{Oklab} & = a_{Koloro} \\
+b_{Oklab} & = b_{Koloro} \\
+\end{align*}
+$$
+
+where
+
+$$
+\delta = \frac{24}{116}
+$$
+
 ## References
 
 - https://bottosson.github.io/posts/oklab/
