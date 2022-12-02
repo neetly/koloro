@@ -1391,9 +1391,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@buncho/webpack-config@npm:6.0.2":
-  version: 6.0.2
-  resolution: "@buncho/webpack-config@npm:6.0.2"
+"@buncho/webpack-config@npm:6.0.3":
+  version: 6.0.3
+  resolution: "@buncho/webpack-config@npm:6.0.3"
   dependencies:
     "@babel/core": "npm:^7.20.5"
     "@neetly/babel-preset": "npm:^0.2.2"
@@ -1407,7 +1407,7 @@ __metadata:
     mini-css-extract-plugin: "npm:^2.7.1"
     postcss: "npm:^8.4.19"
     postcss-loader: "npm:^7.0.2"
-    project-references-webpack-plugin: "npm:^0.1.2"
+    project-references-webpack-plugin: "npm:^0.1.4"
     react-refresh: "npm:^0.14.0"
     resolve-url-loader: "npm:^5.0.0"
     sass: "npm:^1.56.1"
@@ -1418,13 +1418,13 @@ __metadata:
   peerDependenciesMeta:
     webpack-dev-server:
       optional: true
-  checksum: b346610e5b249ef8216cadc82e1691fd822cb21bf9ac2f9cee4ac87ca22154daccba568e822e525738c41fd9a015a74950672b6872e2e64891cd2ad09a226141
+  checksum: 7fa648c1fb2aeef157c7a353f46878ff21c2e70790e1f05b5df75c2003aa0a2ffef3c6dd56fdefbf46507a59231e4ded6683f0fd7538d58d6e6e4a30e70c5aec
   languageName: node
   linkType: hard
 
-"@buncho/webpack-env@npm:6.0.2":
-  version: 6.0.2
-  resolution: "@buncho/webpack-env@npm:6.0.2"
+"@buncho/webpack-env@npm:6.0.3":
+  version: 6.0.3
+  resolution: "@buncho/webpack-env@npm:6.0.3"
   peerDependencies:
     "@types/react": "*"
     "@types/react-dom": "*"
@@ -1433,7 +1433,7 @@ __metadata:
       optional: true
     "@types/react-dom":
       optional: true
-  checksum: 9367619ad42e1ae007458bf79ed591602fb41107861f6beec9a5589c2cf9e35e9bf4b204e6f61cc521fe7002a5324d990cfa3782ca6d1da8cd0f1b8758ef5962
+  checksum: 80f4a767e603c84e7567d560eb144621a387eea6a489eb0c78c93c13902cdc0d6b8fcce1f6a7cc650a5f5b6654c04cc0a7a2a3e6b45c10ba95639e4e2797c851
   languageName: node
   linkType: hard
 
@@ -1609,7 +1609,7 @@ __metadata:
     "@neetly/tsconfig": "npm:^0.2.0"
     "@types/react": "npm:^18.0.25"
     "@types/react-dom": "npm:^18.0.9"
-    buncho: "npm:^6.0.2"
+    buncho: "npm:^6.0.3"
     koloro: "workspace:^"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
@@ -2909,14 +2909,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"buncho@npm:^6.0.2":
-  version: 6.0.2
-  resolution: "buncho@npm:6.0.2"
+"buncho@npm:^6.0.3":
+  version: 6.0.3
+  resolution: "buncho@npm:6.0.3"
   dependencies:
     "@babel/cli": "npm:^7.19.3"
     "@babel/core": "npm:^7.20.5"
-    "@buncho/webpack-config": "npm:6.0.2"
-    "@buncho/webpack-env": "npm:6.0.2"
+    "@buncho/webpack-config": "npm:6.0.3"
+    "@buncho/webpack-env": "npm:6.0.3"
     "@neetly/babel-preset": "npm:^0.2.2"
     clipanion: "npm:3.2.0-rc.14"
     copy-webpack-plugin: "npm:^11.0.0"
@@ -2944,7 +2944,7 @@ __metadata:
       optional: true
   bin:
     buncho: ./bin/buncho.js
-  checksum: 012c35a80f46665fef19ec7a12283d812d41d40c8b4d8fd95706c6c5e27c2f97d609511af617c12853f582e1fcd8aaaa317e1b4ad5e605d7bf7dac9a235b367f
+  checksum: 4986a0b4ce95cba63ad8532a0a6985aa2b763d64192e4d9b6034e0863104924d0079839288f29d55abbabf3c6adfb3d92389c4b0eea6e51ad614b2eeb82e4dcf
   languageName: node
   linkType: hard
 
@@ -5577,7 +5577,7 @@ __metadata:
   resolution: "koloro@workspace:packages/koloro"
   dependencies:
     "@neetly/tsconfig": "npm:^0.2.0"
-    buncho: "npm:^6.0.2"
+    buncho: "npm:^6.0.3"
     colorjs.io: "github:LeaVerou/color.js#commit=520b3a98ad4f4c704140e996c787c7b2dbfd3ce2"
     typescript: "npm:^4.9.3"
   languageName: unknown
@@ -6922,12 +6922,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"project-references-webpack-plugin@npm:^0.1.2":
-  version: 0.1.2
-  resolution: "project-references-webpack-plugin@npm:0.1.2"
+"project-references-webpack-plugin@npm:^0.1.4":
+  version: 0.1.4
+  resolution: "project-references-webpack-plugin@npm:0.1.4"
   dependencies:
     jsonc-parser: "npm:^3.2.0"
-  checksum: 337deefbb46f21ec7794b234132802457ba05593f38c93ad094fdca48a50273f2663792edaacc1a7f9f4dd74502d02b46d87212ce19165be058bcb583f51582a
+  checksum: ca790be198990ca988b27bfbbf49c08fcc0940bd3befc965f5c93f168dca602511e7419ade85087532bca202e499fe70ea417619f06e955613430268dd34869c
   languageName: node
   linkType: hard
 
