@@ -1,0 +1,57 @@
+diff --git a/types/src/interpolation.d.ts b/types/src/interpolation.d.ts
+index b2b3e21f1086540d88b8eb2c80b4d9aaf5f3cf5d..e50b35762291f15dd9b7489db16411fc4bdf082f 100644
+--- a/types/src/interpolation.d.ts
++++ b/types/src/interpolation.d.ts
+@@ -1,5 +1,6 @@
+ import Color, { ColorTypes } from "./color";
+ import ColorSpace from "./space";
++import { Methods } from "./deltaE/index";
+ 
+ export type Range = ((percentage: number) => number) & {
+ 	rangeArgs: { colors: [Color, Color]; options: Record<string, any> };
+@@ -12,6 +13,7 @@ export interface RangeOptions {
+ 	outputSpace?: string | ColorSpace | undefined;
+ 	progression?: ((percentage: number) => number) | undefined;
+ 	premultiplied?: boolean | undefined;
++	hue?: "longer" | "shorter" | "increasing" | "decreasing" | "raw" | undefined;
+ }
+ 
+ export function range(range: Range, options?: RangeOptions): Range;
+@@ -39,6 +41,14 @@ export function mix(
+ 	options?: MixOptions
+ ): number;
+ 
+-export function steps(color1: ColorTypes | Range, color2: ColorTypes): Color[];
++export interface StepsOptions extends RangeOptions {
++	maxDeltaE?: number | undefined;
++	deltaEMethod?: Methods | undefined;
++	steps?: number | undefined;
++	maxSteps?: number | undefined;
++}
++
++export function steps(color1: ColorTypes, color2: ColorTypes, options?: StepsOptions): Color[];
++export function steps(range: Range, options?: StepsOptions): Color[];
+ 
+ export function register(color: typeof Color): void;
+diff --git a/types/src/toGamut.d.ts b/types/src/toGamut.d.ts
+index 08634a489bab82f060b2e61ca8d1139eb9538f8a..b619488ae26d73cc4f17dd1a8b98532220409396 100644
+--- a/types/src/toGamut.d.ts
++++ b/types/src/toGamut.d.ts
+@@ -1,10 +1,16 @@
+ import Color, { ColorObject } from "./color";
+ import ColorSpace from "./space";
+ 
+-export default function toGamut<T extends Color | ColorObject>(
++declare namespace toGamut {
++	let returns: "color";
++}
++
++declare function toGamut<T extends Color | ColorObject>(
+ 	color: T,
+ 	options?: {
+ 		method?: string | undefined;
+ 		space?: string | ColorSpace | undefined;
+ 	}
+ ): T;
++
++export default toGamut;

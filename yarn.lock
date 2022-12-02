@@ -1613,6 +1613,7 @@ __metadata:
     koloro: "workspace:^"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
+    react-router-dom: "npm:^6.4.4"
     typescript: "npm:^4.9.3"
   languageName: unknown
   linkType: soft
@@ -1780,6 +1781,13 @@ __metadata:
     "@xml-tools/parser": "npm:^1.0.11"
     prettier: "npm:>=2.4.0"
   checksum: a8c63004dbc02d1aa98134a716940a0895a0acb0ae017daf33038043f1b0aed390fc705058baa1e6040945f8f0707361c21ba5a2687dc69266e28bd5923fcef4
+  languageName: node
+  linkType: hard
+
+"@remix-run/router@npm:1.0.4":
+  version: 1.0.4
+  resolution: "@remix-run/router@npm:1.0.4"
+  checksum: 81ef9b6d40cf33e1de7bd9e0786375b82e782a7e2f0f3c1a66d96fa364d88832e79f21909bad4b0860397a95ce36081205cceaa0aae90ebec205a61931868048
   languageName: node
   linkType: hard
 
@@ -3210,6 +3218,13 @@ __metadata:
   version: 0.4.2
   resolution: "colorjs.io@https://github.com/LeaVerou/color.js.git#commit=c905aff7f3bf19bfe6cea0bf71952ad8e3eebc7e"
   checksum: 57709f9d152ca3ef5dcc1c3323f6eed1c4622c41a312daef1703ea89dd3ab29f0ca3e6b2bcfa3bd0f76b65241697b8f3e057fd3b3b4861b768c99a7afd49b3ef
+  languageName: node
+  linkType: hard
+
+"colorjs.io@patch:colorjs.io@github:LeaVerou/color.js%23commit=c905aff7f3bf19bfe6cea0bf71952ad8e3eebc7e#./patches/colorjs.io.patch::locator=%40koloro%2Frepo%40workspace%3A.":
+  version: 0.4.2
+  resolution: "colorjs.io@patch:colorjs.io@https%3A//github.com/LeaVerou/color.js.git%23commit=c905aff7f3bf19bfe6cea0bf71952ad8e3eebc7e#./patches/colorjs.io.patch::version=0.4.2&hash=c32266&locator=%40koloro%2Frepo%40workspace%3A."
+  checksum: 3b6abd444ba3d1aa012d0cd248a851b21b99e7384329e468bb5e5adec23c5b7524109a72c4d48505043d85f6f0afe0dd4ed958f52929a02a351622c218e815b1
   languageName: node
   linkType: hard
 
@@ -7043,6 +7058,30 @@ __metadata:
   version: 0.14.0
   resolution: "react-refresh@npm:0.14.0"
   checksum: 0dc7d5a197ae193f0bddea2f8d712a2b8477ae401c9e3b04c85d0a046ac7847b24af573923ab4c3ca67735583a6b421edc43b39a07b4d1a46056289249f4f897
+  languageName: node
+  linkType: hard
+
+"react-router-dom@npm:^6.4.4":
+  version: 6.4.4
+  resolution: "react-router-dom@npm:6.4.4"
+  dependencies:
+    "@remix-run/router": "npm:1.0.4"
+    react-router: "npm:6.4.4"
+  peerDependencies:
+    react: ">=16.8"
+    react-dom: ">=16.8"
+  checksum: 857aa2cb15f3bfeb86d3c5178a1a4829c31d9eaef292bd89fc978177e785aade31581e85f5adab6bdba20c42e999debe45af976c6867e250f5278665989e64e6
+  languageName: node
+  linkType: hard
+
+"react-router@npm:6.4.4":
+  version: 6.4.4
+  resolution: "react-router@npm:6.4.4"
+  dependencies:
+    "@remix-run/router": "npm:1.0.4"
+  peerDependencies:
+    react: ">=16.8"
+  checksum: b6259039fe31ee0e4143850b15f15da7aabba3ed81ba80cd429276bd9f15fd15e3c578349f0bae62a31a31a5c61fd99694b0ba180259d43131f4bd00c3c770d6
   languageName: node
   linkType: hard
 

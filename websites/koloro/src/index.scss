@@ -1,0 +1,15 @@
+:root {
+  --font-ui: "Source Sans 3", sans-serif;
+  --font-code: "M PLUS Code Latin", sans-serif;
+  --color-primary: #da0071;
+}
+
+html {
+  font-family: var(--font-ui);
+  line-height: 1.5;
+  overflow-wrap: break-word;
+}
+
+body {
+  margin: 0;
+}
