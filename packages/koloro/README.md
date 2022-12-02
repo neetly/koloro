@@ -10,7 +10,7 @@ yarn add koloro
 ```ts
 import { Color } from "koloro";
 
-const color = new Color("koloro-lch", [40, 20, 60])
+const color = new Color("koloro-lch", [60, 60, 0])
   .to("srgb")
   .toString({ format: "hex" });
 ```
