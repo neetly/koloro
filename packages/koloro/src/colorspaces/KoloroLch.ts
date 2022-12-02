@@ -7,7 +7,7 @@ const KoloroLCh = new Color.Space({
   name: "Koloro LCh",
   white: Color.WHITES.D65,
   coords: {
-    l: { name: "L", refRange: [0, 1] },
+    l: { name: "L", refRange: [0, 100] },
     c: { name: "C", refRange: [0, 0.4] },
     h: { name: "h", type: "angle", refRange: [0, 360] },
   },
