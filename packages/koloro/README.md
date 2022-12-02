@@ -25,8 +25,8 @@ L_{Koloro} & = \begin{cases}
   116 L_{Oklab} - 16 , & L_{Oklab} \gt \delta \\
   8 \left( \dfrac {L_{Oklab}} {\delta} \right) ^ {3} , & L_{Oklab} \le \delta \\
 \end {cases} \\
-a_{Koloro} & = 100 a_{Oklab} \\
-b_{Koloro} & = 100 b_{Oklab} \\
+a_{Koloro} & = 250 a_{Oklab} \\
+b_{Koloro} & = 250 b_{Oklab} \\
 \end{align*}
 $$
 
@@ -44,8 +44,8 @@ L_{Oklab} & = \begin{cases}
   \dfrac {L_{Koloro} + 16} {116} , & L_{Koloro} \gt 8 \\
   \delta \left( \dfrac {L_{Koloro}} {8} \right) ^ {\tfrac{1}{3}} , & L_{Koloro} \le 8 \\
 \end{cases} \\
-a_{Oklab} & = \dfrac {a_{Koloro}} {100} \\
-b_{Oklab} & = \dfrac {b_{Koloro}} {100} \\
+a_{Oklab} & = \dfrac {a_{Koloro}} {250} \\
+b_{Oklab} & = \dfrac {b_{Koloro}} {250} \\
 \end{align*}
 $$
 

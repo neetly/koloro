@@ -6,8 +6,8 @@ const KoloroLab = new Color.Space({
   white: Color.WHITES.D65,
   coords: {
     l: { name: "L", refRange: [0, 100] },
-    a: { name: "a", refRange: [-40, 40] },
-    b: { name: "b", refRange: [-40, 40] },
+    a: { name: "a", refRange: [-100, 100] },
+    b: { name: "b", refRange: [-100, 100] },
   },
 
   base: Color.spaces["oklab"],
@@ -19,7 +19,7 @@ const KoloroLab = new Color.Space({
     } else {
       L = (L / δ) ** 3 * 8;
     }
-    return [L, a * 100, b * 100];
+    return [L, a * 250, b * 250];
   },
 
   toBase: ([L, a, b]) => {
@@ -29,7 +29,7 @@ const KoloroLab = new Color.Space({
     } else {
       L = Math.cbrt(L / 8) * δ;
     }
-    return [L, a / 100, b / 100];
+    return [L, a / 250, b / 250];
   },
 });
 
