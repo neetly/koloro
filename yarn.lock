@@ -3206,10 +3206,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"colorjs.io@github:LeaVerou/color.js#commit=520b3a98ad4f4c704140e996c787c7b2dbfd3ce2":
+"colorjs.io@github:LeaVerou/color.js#commit=c905aff7f3bf19bfe6cea0bf71952ad8e3eebc7e":
   version: 0.4.2
-  resolution: "colorjs.io@https://github.com/LeaVerou/color.js.git#commit=520b3a98ad4f4c704140e996c787c7b2dbfd3ce2"
-  checksum: 43e8860545f68db101e0650b5f3c772c1cdeabdc08eee4c1318739be0970c360b56f11e990774cc48bb743a4284e28cb36d8c0151d45bc6a0b5b49f0849e4d0c
+  resolution: "colorjs.io@https://github.com/LeaVerou/color.js.git#commit=c905aff7f3bf19bfe6cea0bf71952ad8e3eebc7e"
+  checksum: 57709f9d152ca3ef5dcc1c3323f6eed1c4622c41a312daef1703ea89dd3ab29f0ca3e6b2bcfa3bd0f76b65241697b8f3e057fd3b3b4861b768c99a7afd49b3ef
   languageName: node
   linkType: hard
 
@@ -5578,7 +5578,7 @@ __metadata:
   dependencies:
     "@neetly/tsconfig": "npm:^0.2.0"
     buncho: "npm:^6.0.3"
-    colorjs.io: "github:LeaVerou/color.js#commit=520b3a98ad4f4c704140e996c787c7b2dbfd3ce2"
+    colorjs.io: "github:LeaVerou/color.js#commit=c905aff7f3bf19bfe6cea0bf71952ad8e3eebc7e"
     typescript: "npm:^4.9.3"
   languageName: unknown
   linkType: soft
