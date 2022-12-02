@@ -3206,17 +3206,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"colorjs.io@npm:^0.4.2":
+"colorjs.io@github:LeaVerou/color.js#commit=520b3a98ad4f4c704140e996c787c7b2dbfd3ce2":
   version: 0.4.2
-  resolution: "colorjs.io@npm:0.4.2"
-  checksum: dba8bfb16ddb4921d8f7eade365d90dc85179489469a6f84ce12d71e288df81156b8370eaac988b3c634339666160d0ac0985654b18cfd4f817abdc9a7a85cd9
-  languageName: node
-  linkType: hard
-
-"colorjs.io@patch:colorjs.io@npm:^0.4.2#./patches/colorjs.io.patch::locator=%40koloro%2Frepo%40workspace%3A.":
-  version: 0.4.2
-  resolution: "colorjs.io@patch:colorjs.io@npm%3A0.4.2#./patches/colorjs.io.patch::version=0.4.2&hash=a27ed6&locator=%40koloro%2Frepo%40workspace%3A."
-  checksum: 70c1e35409ea496767c6d2a1f2a00f387a96f35d816d6c16a4bdbf18f319dcbcfb92f70c6f26c2bbb0b3d0e6d1a7cffe871b6834e85b5367c93d1d69f66f8c87
+  resolution: "colorjs.io@https://github.com/LeaVerou/color.js.git#commit=520b3a98ad4f4c704140e996c787c7b2dbfd3ce2"
+  checksum: 43e8860545f68db101e0650b5f3c772c1cdeabdc08eee4c1318739be0970c360b56f11e990774cc48bb743a4284e28cb36d8c0151d45bc6a0b5b49f0849e4d0c
   languageName: node
   linkType: hard
 
@@ -5585,7 +5578,7 @@ __metadata:
   dependencies:
     "@neetly/tsconfig": "npm:^0.2.0"
     buncho: "npm:^6.0.2"
-    colorjs.io: "npm:^0.4.2"
+    colorjs.io: "github:LeaVerou/color.js#commit=520b3a98ad4f4c704140e996c787c7b2dbfd3ce2"
     typescript: "npm:^4.9.3"
   languageName: unknown
   linkType: soft
