@@ -3,6 +3,18 @@
 [![CI](https://github.com/neetly/koloro/actions/workflows/ci.yml/badge.svg)](https://github.com/neetly/koloro/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/koloro)](https://www.npmjs.com/package/koloro)
 
+```sh
+yarn add koloro
+```
+
+```ts
+import { Color } from "koloro";
+
+const color = new Color("koloro-lch", [0.5, 0.2, 60])
+  .to("srgb")
+  .toString({ format: "hex" });
+```
+
 ## Colorspace
 
 ### Oklab to Koloro
