@@ -17,13 +17,12 @@
     "clean": "buncho library clean",
     "prepack": "run clean && run build && cp ../../LICENSE ."
   },
-  "peerDependencies": {
-    "colorjs.io": "*"
+  "dependencies": {
+    "colorjs.io": "^0.4.2"
   },
   "devDependencies": {
     "@neetly/tsconfig": "^0.2.0",
     "buncho": "^6.0.2",
-    "colorjs.io": "^0.4.2",
     "typescript": "^4.9.3"
   }
 }

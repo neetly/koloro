@@ -5,3 +5,5 @@ import { KoloroLCh } from "./colorspaces/KoloroLch";
 
 Color.Space.register(KoloroLab);
 Color.Space.register(KoloroLCh);
+
+export { Color };

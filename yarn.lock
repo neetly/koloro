@@ -5587,8 +5587,6 @@ __metadata:
     buncho: "npm:^6.0.2"
     colorjs.io: "npm:^0.4.2"
     typescript: "npm:^4.9.3"
-  peerDependencies:
-    colorjs.io: "*"
   languageName: unknown
   linkType: soft
 
