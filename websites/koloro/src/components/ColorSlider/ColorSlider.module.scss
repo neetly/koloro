@@ -37,7 +37,7 @@
     height: 100%;
   }
 
-  &:is(::-webkit-slider-thumb, ::-moz-range-thumb) {
+  &::-webkit-slider-thumb {
     appearance: none;
     width: 1.5rem;
     height: 100%;
