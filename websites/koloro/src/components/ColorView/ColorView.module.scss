@@ -2,13 +2,12 @@
 
 .container {
   display: grid;
-  grid-template: "preview value copyButton ." / auto auto auto 1fr;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 0.5rem 1rem;
 }
 
 .preview {
-  grid-area: preview;
   width: 4.5rem;
   height: 3rem;
   border-radius: 0.5rem;
@@ -17,7 +16,6 @@
 }
 
 .value {
-  grid-area: value;
   font-family: var(--font-code);
   font-size: 1.5rem;
   font-weight: 500;
@@ -27,18 +25,11 @@
 .copyButton {
   all: unset;
 
-  grid-area: copyButton;
-  margin: -0.5rem;
   padding: 0.5rem;
   border-radius: 0.5rem;
   user-select: none;
   cursor: pointer;
   transition: background-color 100ms;
-
-  &:focus-visible {
-    outline: 2px solid #000;
-    outline-offset: 2px;
-  }
 
   @media (hover: hover) {
     &:hover {
@@ -48,5 +39,10 @@
 
   &:active {
     background-color: color.change(#000, $alpha: 0.1);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #000;
+    outline-offset: 2px;
   }
 }

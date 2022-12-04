@@ -7,7 +7,11 @@ import { PickerPage } from "./pages/PickerPage";
 const routes = createRoutesFromElements(
   <Route element={<App />}>
     <Route path="/" element={<HomePage />} />
-    <Route path="/picker" element={<PickerPage />} />
+    <Route
+      path="/picker"
+      element={<PickerPage />}
+      handle={{ name: "Color Picker" }}
+    />
   </Route>,
 );
 

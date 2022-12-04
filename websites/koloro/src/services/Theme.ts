@@ -1,5 +1,6 @@
 import { Color } from "koloro";
 
+import { formatColor } from "../utils/formatColor";
 import { Storage } from "./Storage";
 
 const Theme = {
@@ -20,9 +21,7 @@ const Theme = {
     for (const [name, [lightness, chroma, hue]] of Object.entries(colors)) {
       document.documentElement.style.setProperty(
         name,
-        new Color("koloro-lch", [lightness, chroma, hue])
-          .to("srgb")
-          .toString({ format: "hex" }),
+        formatColor(new Color("koloro-lch", [lightness, chroma, hue])),
       );
     }
 

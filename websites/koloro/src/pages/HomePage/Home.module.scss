@@ -1,12 +1,6 @@
-.container {
+.page {
   display: grid;
   gap: 1rem;
-}
-
-.title {
-  margin: 1rem 0;
-  font-size: 2rem;
-  font-weight: 600;
 }
 
 .nav {
@@ -17,6 +11,7 @@
 
 .navLink {
   all: unset;
+
   margin: 0 -0.25rem;
   padding: 0 0.25rem;
   border-radius: 0.25rem;

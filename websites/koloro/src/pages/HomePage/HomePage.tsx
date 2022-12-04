@@ -4,8 +4,7 @@ import styles from "./Home.module.scss";
 
 const HomePage = () => {
   return (
-    <main className={styles.container}>
-      <h1 className={styles.title}>Koloro</h1>
+    <main className={styles.page}>
       <nav className={styles.nav}>
         <Link className={styles.navLink} to="/picker">
           Color Picker

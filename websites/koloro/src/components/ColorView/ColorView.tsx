@@ -1,6 +1,7 @@
 import type { Color } from "koloro";
-import { useMemo } from "react";
 
+import { formatColor } from "../../utils/formatColor";
+import { VisuallyHidden } from "../VisuallyHidden";
 import styles from "./ColorView.module.scss";
 
 type ColorViewProps = {
@@ -8,24 +9,18 @@ type ColorViewProps = {
 };
 
 const ColorView = ({ color }: ColorViewProps) => {
-  const value = useMemo(() => {
-    return color.to("srgb").toString({ format: "hex", collapse: false });
-  }, [color]);
+  const value = formatColor(color);
 
   const onCopyButtonClick = () => {
     void navigator.clipboard.writeText(value);
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.preview} style={{ "--color": value }} />
+    <div className={styles.container} style={{ "--color": value }}>
+      <div className={styles.preview} />
       <div className={styles.value}>{value}</div>
-      <button
-        className={styles.copyButton}
-        onClick={onCopyButtonClick}
-        aria-label="Copy Color Value"
-      >
-        📋
+      <button className={styles.copyButton} onClick={onCopyButtonClick}>
+        📋 <VisuallyHidden>Copy Color Value</VisuallyHidden>
       </button>
     </div>
   );

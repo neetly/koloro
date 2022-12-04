@@ -1,116 +1,35 @@
 import { Color } from "koloro";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import { ColorSlider } from "../../components/ColorSlider";
-import { ColorView } from "../../components/ColorView";
+import { ColorPicker } from "../../components/ColorPicker";
 import { Storage } from "../../services/Storage";
 import { Theme } from "../../services/Theme";
 import styles from "./PickerPage.module.scss";
 
 const PickerPage = () => {
-  const [lightness, setLightness] = useState(
-    () => Storage.getItem<number>("picker.lightness") ?? 50,
-  );
-  const [chroma, setChroma] = useState(
-    () => Storage.getItem<number>("picker.chroma") ?? 50,
-  );
-  const [hue, setHue] = useState(() => Theme.getHue());
+  const [color, setColor] = useState(() => {
+    return new Color("koloro-lch", [
+      Storage.getItem("picker.lightness") ?? 50,
+      Storage.getItem("picker.chroma") ?? 50,
+      Theme.getHue(),
+    ]);
+  });
 
-  const color = useMemo(() => {
-    const color = new Color("koloro-lch", [lightness, chroma, hue]);
-    return color.toGamut({ space: "srgb" }) as Color;
-  }, [lightness, chroma, hue]);
+  const onColorChange = (color: Color) => {
+    setColor(color.to("koloro-lch") as Color);
+  };
 
-  const actualChroma = color.coords[1];
+  const [lightness, chroma, hue] = color.coords;
 
-  const lightnessColorStops = useMemo(() => {
-    return getColorStops(
-      new Color("koloro-lch", [0, chroma, hue]),
-      new Color("koloro-lch", [100, chroma, hue]),
-      10,
-    );
-  }, [chroma, hue]);
-
-  const chromaColorStops = useMemo(() => {
-    return getColorStops(
-      new Color("koloro-lch", [lightness, 0, hue]),
-      new Color("koloro-lch", [lightness, 100, hue]),
-      10,
-    );
-  }, [lightness, hue]);
-
-  const hueColorStops = useMemo(() => {
-    return getColorStops(
-      new Color("koloro-lch", [lightness, chroma, 0]),
-      new Color("koloro-lch", [lightness, chroma, 360]),
-      36,
-    );
-  }, [lightness, chroma]);
-
-  useEffect(() => {
-    Storage.setItem("picker.lightness", lightness);
-  }, [lightness]);
-
-  useEffect(() => {
-    Storage.setItem("picker.chroma", chroma);
-  }, [chroma]);
-
-  useEffect(() => {
-    Theme.setHue(hue);
-  }, [hue]);
+  useEffect(() => Storage.setItem("picker.lightness", lightness), [lightness]);
+  useEffect(() => Storage.setItem("picker.chroma", chroma), [chroma]);
+  useEffect(() => Theme.setHue(hue), [hue]);
 
   return (
-    <main className={styles.container}>
-      <h1 className={styles.title}>
-        <Link className={styles.homeLink} to="/">
-          Koloro
-        </Link>
-        {" » "}
-        Color Picker
-      </h1>
-      <ColorSlider
-        label="Lightness"
-        formatValue={(lightness) => formatNumber(lightness, "%")}
-        rule={{ min: 0, max: 100, step: 1 }}
-        colorStops={lightnessColorStops}
-        value={lightness}
-        onChange={setLightness}
-      />
-      <ColorSlider
-        label="Chroma"
-        formatValue={(chroma) =>
-          `(actual: ${formatNumber(actualChroma, "%")})  ` +
-          formatNumber(chroma, "%")
-        }
-        rule={{ min: 0, max: 100, step: 1 }}
-        colorStops={chromaColorStops}
-        value={chroma}
-        onChange={setChroma}
-      />
-      <ColorSlider
-        label="Hue"
-        formatValue={(hue) => formatNumber(hue, "°")}
-        rule={{ min: 0, max: 360, step: 1 }}
-        colorStops={hueColorStops}
-        value={hue}
-        onChange={setHue}
-      />
-      <section className={styles.colorSection}>
-        <h1 className={styles.colorTitle}>Color</h1>
-        <ColorView color={color} />
-      </section>
+    <main className={styles.page}>
+      <ColorPicker color={color} onColorChange={onColorChange} />
     </main>
-  );
-};
-
-const formatNumber = (value: number, unit: string) => {
-  return value.toFixed(0).padStart(3) + unit;
-};
-
-const getColorStops = (from: Color, to: Color, steps: number) => {
-  return Color.steps(from, to, { steps, hue: "raw" }).map(
-    (color) => color.toGamut({ space: "srgb" }) as Color,
   );
 };
 
