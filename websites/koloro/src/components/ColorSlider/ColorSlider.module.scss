@@ -46,7 +46,7 @@
   }
 
   &::-moz-range-thumb {
-    appearance: none;
+    all: unset;
     width: 1.5rem;
     height: 100%;
     border-radius: 0.5rem;
