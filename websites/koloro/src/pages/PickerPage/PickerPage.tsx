@@ -1,5 +1,5 @@
 import { Color } from "koloro";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { ColorSlider } from "../../components/ColorSlider";
@@ -41,6 +41,22 @@ const PickerPage = () => {
       36,
     );
   }, [lightness, chroma]);
+
+  useEffect(() => {
+    const colors: Record<string, [number, number, number]> = {
+      "--color-background": [99, 1, hue],
+      "--color-primary": [50, 60, hue],
+    };
+
+    for (const [name, [lightness, chroma, hue]] of Object.entries(colors)) {
+      document.documentElement.style.setProperty(
+        name,
+        new Color("koloro-lch", [lightness, chroma, hue])
+          .to("srgb")
+          .toString({ format: "hex" }),
+      );
+    }
+  }, [hue]);
 
   return (
     <main className={styles.container}>
