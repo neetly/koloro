@@ -4,12 +4,13 @@ import { Link } from "react-router-dom";
 
 import { ColorSlider } from "../../components/ColorSlider";
 import { ColorView } from "../../components/ColorView";
+import { Theme } from "../../services/Theme";
 import styles from "./PickerPage.module.scss";
 
 const PickerPage = () => {
   const [lightness, setLightness] = useState(80);
   const [chroma, setChroma] = useState(60);
-  const [hue, setHue] = useState(0);
+  const [hue, setHue] = useState(() => Theme.getHue());
 
   const color = useMemo(() => {
     const color = new Color("koloro-lch", [lightness, chroma, hue]);
@@ -43,19 +44,7 @@ const PickerPage = () => {
   }, [lightness, chroma]);
 
   useEffect(() => {
-    const colors: Record<string, [number, number, number]> = {
-      "--color-background": [99, 1, hue],
-      "--color-primary": [50, 60, hue],
-    };
-
-    for (const [name, [lightness, chroma, hue]] of Object.entries(colors)) {
-      document.documentElement.style.setProperty(
-        name,
-        new Color("koloro-lch", [lightness, chroma, hue])
-          .to("srgb")
-          .toString({ format: "hex" }),
-      );
-    }
+    Theme.setHue(hue);
   }, [hue]);
 
   return (
