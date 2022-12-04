@@ -4,12 +4,17 @@ import { Link } from "react-router-dom";
 
 import { ColorSlider } from "../../components/ColorSlider";
 import { ColorView } from "../../components/ColorView";
+import { Storage } from "../../services/Storage";
 import { Theme } from "../../services/Theme";
 import styles from "./PickerPage.module.scss";
 
 const PickerPage = () => {
-  const [lightness, setLightness] = useState(80);
-  const [chroma, setChroma] = useState(60);
+  const [lightness, setLightness] = useState(
+    () => Storage.getItem<number>("picker.lightness") ?? 50,
+  );
+  const [chroma, setChroma] = useState(
+    () => Storage.getItem<number>("picker.chroma") ?? 50,
+  );
   const [hue, setHue] = useState(() => Theme.getHue());
 
   const color = useMemo(() => {
@@ -42,6 +47,14 @@ const PickerPage = () => {
       36,
     );
   }, [lightness, chroma]);
+
+  useEffect(() => {
+    Storage.setItem("picker.lightness", lightness);
+  }, [lightness]);
+
+  useEffect(() => {
+    Storage.setItem("picker.chroma", chroma);
+  }, [chroma]);
 
   useEffect(() => {
     Theme.setHue(hue);
