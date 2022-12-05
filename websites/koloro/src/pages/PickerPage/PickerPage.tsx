@@ -1,6 +1,5 @@
 import { Color } from "koloro";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 import { ColorPicker } from "../../components/ColorPicker";
 import { Storage } from "../../services/Storage";
