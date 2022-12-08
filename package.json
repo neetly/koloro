@@ -24,7 +24,7 @@
     "@prettier/plugin-xml": "^2.2.0",
     "eslint": "^8.29.0",
     "prettier": "^2.8.1",
-    "typescript": "^4.9.3"
+    "typescript": "^4.9.4"
   },
   "resolutions": {
     "colorjs.io": "patch:colorjs.io@github:LeaVerou/color.js%23commit=c905aff7f3bf19bfe6cea0bf71952ad8e3eebc7e#./patches/colorjs.io.patch"
