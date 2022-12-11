@@ -29,5 +29,5 @@
   "resolutions": {
     "colorjs.io": "patch:colorjs.io@github:LeaVerou/color.js%23commit=c905aff7f3bf19bfe6cea0bf71952ad8e3eebc7e#./patches/colorjs.io.patch"
   },
-  "packageManager": "yarn@4.0.0-rc.32"
+  "packageManager": "yarn@4.0.0-rc.33"
 }
