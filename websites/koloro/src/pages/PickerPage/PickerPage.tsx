@@ -2,6 +2,7 @@ import { Color } from "koloro";
 import { useEffect, useState } from "react";
 
 import { ColorPicker } from "../../components/ColorPicker";
+import { ColorView } from "../../components/ColorView";
 import { Storage } from "../../services/Storage";
 import { Theme } from "../../services/Theme";
 import styles from "./PickerPage.module.scss";
@@ -15,10 +16,6 @@ const PickerPage = () => {
     ]);
   });
 
-  const onColorChange = (color: Color) => {
-    setColor(color.to("koloro-lch") as Color);
-  };
-
   const [lightness, chroma, hue] = color.coords;
 
   useEffect(() => Storage.setItem("picker.lightness", lightness), [lightness]);
@@ -27,7 +24,8 @@ const PickerPage = () => {
 
   return (
     <main className={styles.page}>
-      <ColorPicker color={color} onColorChange={onColorChange} />
+      <ColorPicker color={color} onColorChange={setColor} />
+      <ColorView color={color} />
     </main>
   );
 };

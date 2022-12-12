@@ -1,5 +1,7 @@
 import type { Color } from "koloro";
 
+import { toColorGamut } from "./toColorGamut";
+
 const cache = new WeakMap<Color, string>();
 
 const formatColor = (color: Color) => {
@@ -8,10 +10,9 @@ const formatColor = (color: Color) => {
     return result;
   }
 
-  result = color.to("srgb").toString({
-    format: "hex",
-    collapse: false,
-  });
+  result = toColorGamut(color)
+    .to("srgb")
+    .toString({ format: "hex", collapse: false });
 
   cache.set(color, result);
   return result;

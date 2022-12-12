@@ -1,8 +1,8 @@
 import { Color } from "koloro";
 import { useMemo } from "react";
 
+import { toColorGamut } from "../../utils/toColorGamut";
 import { ColorSlider } from "../ColorSlider";
-import { ColorView } from "../ColorView";
 import styles from "./ColorPicker.module.scss";
 
 type ColorPickerProps = {
@@ -11,9 +11,7 @@ type ColorPickerProps = {
 };
 
 const ColorPicker = ({ color, onColorChange }: ColorPickerProps) => {
-  const [lightness, chroma, hue] = useMemo(() => {
-    return color.to("koloro-lch").coords;
-  }, [color]);
+  const [lightness, chroma, hue] = color.coords;
 
   const onLightnessChange = (lightness: number) => {
     onColorChange(new Color("koloro-lch", [lightness, chroma, hue]));
@@ -51,19 +49,14 @@ const ColorPicker = ({ color, onColorChange }: ColorPickerProps) => {
     );
   }, [lightness, chroma]);
 
-  const actualColor = useMemo(() => {
-    const color = new Color("koloro-lch", [lightness, chroma, hue]);
-    return color.toGamut({ space: "srgb" }) as Color;
-  }, [lightness, chroma, hue]);
-
-  const actualChroma = actualColor.coords[1];
+  const actualChroma = toColorGamut(color).coords[1];
 
   return (
     <div className={styles.container}>
       <ColorSlider
         label="Lightness"
         rule={{ min: 0, max: 100, step: 1 }}
-        color={actualColor}
+        color={color}
         colorStops={lightnessColorStops}
         value={lightness}
         valueText={formatNumber(lightness, "%")}
@@ -72,7 +65,7 @@ const ColorPicker = ({ color, onColorChange }: ColorPickerProps) => {
       <ColorSlider
         label="Chroma"
         rule={{ min: 0, max: 100, step: 1 }}
-        color={actualColor}
+        color={color}
         colorStops={chromaColorStops}
         value={chroma}
         valueText={
@@ -84,13 +77,12 @@ const ColorPicker = ({ color, onColorChange }: ColorPickerProps) => {
       <ColorSlider
         label="Hue"
         rule={{ min: 0, max: 360, step: 1 }}
-        color={actualColor}
+        color={color}
         colorStops={hueColorStops}
         value={hue}
         valueText={formatNumber(hue, "°")}
         onChange={onHueChange}
       />
-      <ColorView color={actualColor} />
     </div>
   );
 };
@@ -101,7 +93,7 @@ const formatNumber = (value: number, unit: string) => {
 
 const getColorStops = (from: Color, to: Color, steps: number) => {
   return Color.steps(from, to, { steps, hue: "raw" }).map((color) => {
-    return color.toGamut({ space: "srgb" }) as Color;
+    return toColorGamut(color as Color);
   });
 };
 
