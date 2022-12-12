@@ -18,7 +18,7 @@
     "prepack": "run clean && run build && cp ../../LICENSE ."
   },
   "dependencies": {
-    "colorjs.io": "github:LeaVerou/color.js#commit=c905aff7f3bf19bfe6cea0bf71952ad8e3eebc7e"
+    "colorjs.io": "github:LeaVerou/color.js#commit=8fc1e666d9443453117e1d1e3241837ba9b9f5fb"
   },
   "devDependencies": {
     "@neetly/tsconfig": "^0.2.0",
