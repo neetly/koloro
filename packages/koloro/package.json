@@ -17,9 +17,6 @@
     "clean": "buncho library clean",
     "prepack": "run clean && run build && cp ../../LICENSE ."
   },
-  "dependencies": {
-    "colorjs.io": "github:LeaVerou/color.js#commit=8fc1e666d9443453117e1d1e3241837ba9b9f5fb"
-  },
   "devDependencies": {
     "@neetly/tsconfig": "^0.2.0",
     "buncho": "^6.0.4",

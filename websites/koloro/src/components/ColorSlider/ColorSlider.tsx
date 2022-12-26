@@ -2,7 +2,6 @@ import type { Color } from "koloro";
 import type { ReactNode } from "react";
 import { useId } from "react";
 
-import { formatColor } from "../../utils/formatColor";
 import styles from "./ColorSlider.module.scss";
 
 type ColorSliderProps = {
@@ -26,8 +25,8 @@ const ColorSlider = ({
 }: ColorSliderProps) => {
   const id = useId();
 
-  const colorValue = formatColor(color);
-  const colorStopsValue = colorStops.map(formatColor).join(",");
+  const colorValue = color.toHex();
+  const colorStopsValue = colorStops.map((color) => color.toHex()).join(",");
 
   return (
     <div

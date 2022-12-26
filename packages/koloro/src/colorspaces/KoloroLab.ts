@@ -1,16 +1,10 @@
-import Color from "colorjs.io";
+import { ColorSpace } from "../ColorSpace";
+import { Oklab } from "./Oklab";
 
-const KoloroLab = new Color.Space({
+const KoloroLab = new ColorSpace({
   id: "koloro-lab",
-  name: "Koloro Lab",
-  white: Color.WHITES.D65,
-  coords: {
-    l: { name: "L", refRange: [0, 100] },
-    a: { name: "a", refRange: [-100, 100] },
-    b: { name: "b", refRange: [-100, 100] },
-  },
 
-  base: Color.spaces["oklab"],
+  base: Oklab,
 
   fromBase: ([L, a, b]) => {
     const δ = 24 / 116;

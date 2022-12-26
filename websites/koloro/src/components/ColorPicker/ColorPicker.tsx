@@ -1,7 +1,6 @@
 import { Color } from "koloro";
 import { useMemo } from "react";
 
-import { toColorGamut } from "../../utils/toColorGamut";
 import { ColorSlider } from "../ColorSlider";
 import styles from "./ColorPicker.module.scss";
 
@@ -49,7 +48,7 @@ const ColorPicker = ({ color, onColorChange }: ColorPickerProps) => {
     );
   }, [lightness, chroma]);
 
-  const actualChroma = toColorGamut(color).coords[1];
+  const actualChroma = color.toGamut("srgb").coords[1];
 
   return (
     <div className={styles.container}>
@@ -92,9 +91,17 @@ const formatNumber = (value: number, unit: string) => {
 };
 
 const getColorStops = (from: Color, to: Color, steps: number) => {
-  return Color.steps(from, to, { steps, hue: "raw" }).map((color) => {
-    return toColorGamut(color as Color);
-  });
+  const colors: Color[] = [];
+  for (let index = 0; index <= steps; index++) {
+    colors.push(
+      new Color("koloro-lch", [
+        from.coords[0] + (to.coords[0] - from.coords[0]) * (index / steps),
+        from.coords[1] + (to.coords[1] - from.coords[1]) * (index / steps),
+        from.coords[2] + (to.coords[2] - from.coords[2]) * (index / steps),
+      ]),
+    );
+  }
+  return colors as readonly Color[];
 };
 
 export { type ColorPickerProps, ColorPicker };

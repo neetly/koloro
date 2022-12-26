@@ -1,14 +1,14 @@
 import { ColorSpace } from "../ColorSpace";
-import { KoloroLab } from "./KoloroLab";
+import { Oklab } from "./Oklab";
 
-const KoloroLCh = new ColorSpace({
-  id: "koloro-lch",
+const Oklch = new ColorSpace({
+  id: "oklch",
 
-  base: KoloroLab,
+  base: Oklab,
 
   fromBase: ([L, a, b]) => {
     const C = Math.sqrt(a ** 2 + b ** 2);
-    if (C < 0.025) {
+    if (C < 0.0001) {
       return [L, C, NaN];
     }
 
@@ -27,4 +27,4 @@ const KoloroLCh = new ColorSpace({
   },
 });
 
-export { KoloroLCh };
+export { Oklch };

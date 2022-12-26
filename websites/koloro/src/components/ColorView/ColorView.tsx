@@ -1,6 +1,5 @@
 import type { Color } from "koloro";
 
-import { formatColor } from "../../utils/formatColor";
 import { VisuallyHidden } from "../VisuallyHidden";
 import styles from "./ColorView.module.scss";
 
@@ -9,7 +8,7 @@ type ColorViewProps = {
 };
 
 const ColorView = ({ color }: ColorViewProps) => {
-  const value = formatColor(color);
+  const value = color.toHex();
 
   const onCopyButtonClick = () => {
     void navigator.clipboard.writeText(value);
