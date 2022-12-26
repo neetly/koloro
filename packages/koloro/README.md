@@ -10,9 +10,7 @@ yarn add koloro
 ```ts
 import { Color } from "koloro";
 
-const color = new Color("koloro-lch", [50, 50, 0])
-  .to("srgb")
-  .toString({ format: "hex" });
+const color = new Color("koloro-lch", [50, 50, 0]).toHex();
 ```
 
 ## Colorspace
