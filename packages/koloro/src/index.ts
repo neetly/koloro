@@ -1,6 +1,6 @@
 import { Color } from "./Color";
 import { KoloroLab } from "./colorspaces/KoloroLab";
-import { KoloroLCh } from "./colorspaces/KoloroLch";
+import { KoloroLCh } from "./colorspaces/KoloroLCh";
 import { Oklab } from "./colorspaces/Oklab";
 import { Oklch } from "./colorspaces/Oklch";
 import { sRGB } from "./colorspaces/sRGB";
@@ -17,7 +17,7 @@ export * from "./Color";
 export * from "./ColorCoords";
 export * from "./ColorSpace";
 export * from "./colorspaces/KoloroLab";
-export * from "./colorspaces/KoloroLch";
+export * from "./colorspaces/KoloroLCh";
 export * from "./colorspaces/Oklab";
 export * from "./colorspaces/Oklch";
 export * from "./colorspaces/sRGB";

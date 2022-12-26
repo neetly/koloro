@@ -1,6 +1,6 @@
 import type { ColorCoords } from "./ColorCoords";
 import { ColorSpace } from "./ColorSpace";
-import { Oklch } from "./colorspaces/Oklch";
+import { KoloroLCh } from "./colorspaces/KoloroLCh";
 
 class Color {
   readonly colorspace: ColorSpace;
@@ -39,13 +39,13 @@ class Color {
       return this;
     }
 
-    const [lightness, chroma, hue] = this.to(Oklch).coords;
+    const [lightness, chroma, hue] = this.to(KoloroLCh).coords;
 
-    if (lightness > 1) {
-      return new Color(Oklch, [1, 0, 0]).to(this.colorspace).toClipped();
+    if (lightness > 100) {
+      return new Color(KoloroLCh, [100, 0, 0]).to(this.colorspace).toClipped();
     }
     if (lightness < 0) {
-      return new Color(Oklch, [0, 0, 0]).to(this.colorspace).toClipped();
+      return new Color(KoloroLCh, [0, 0, 0]).to(this.colorspace).toClipped();
     }
 
     let minChroma = 0;
@@ -54,7 +54,7 @@ class Color {
 
     while (maxChroma - minChroma >= 0.0001) {
       const chroma = (minChroma + maxChroma) / 2;
-      bestColor = new Color(Oklch, [lightness, chroma, hue]) //
+      bestColor = new Color(KoloroLCh, [lightness, chroma, hue]) //
         .to(this.colorspace);
 
       if (bestColor.inGamut()) {
@@ -82,17 +82,6 @@ class Color {
             .padStart(2, "0");
         })
         .join("")
-    );
-  }
-
-  static deltaE(color1: Color, color2: Color) {
-    color1 = color1.to(Oklch);
-    color2 = color2.to(Oklch);
-
-    return Math.sqrt(
-      (color1.coords[0] - color2.coords[0]) ** 2 +
-        (color1.coords[1] - color2.coords[1]) ** 2 +
-        (color1.coords[2] - color2.coords[2]) ** 2,
     );
   }
 
