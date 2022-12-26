@@ -58,4 +58,3 @@ $$
 - https://bottosson.github.io/posts/oklab/
 - https://raphlinus.github.io/color/2021/01/18/oklab-critique.html
 - https://github.com/svgeesus/svgeesus.github.io/blob/master/Color/OKLab-notes.md
-- https://colorjs.io/docs/gamut-mapping.html
