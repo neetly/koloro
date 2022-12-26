@@ -8,7 +8,7 @@ const Oklch = new ColorSpace({
 
   fromBase: ([L, a, b]) => {
     const C = Math.sqrt(a ** 2 + b ** 2);
-    if (C < 0.0001) {
+    if (C < 0.00004) {
       return [L, C, NaN];
     }
 

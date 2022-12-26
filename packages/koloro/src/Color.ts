@@ -13,7 +13,7 @@ class Color {
 
   to(colorspace: string | ColorSpace) {
     return new Color(
-      Color.getColorSpace(colorspace),
+      colorspace,
       ColorSpace.convert(
         this.colorspace,
         Color.getColorSpace(colorspace),
@@ -52,7 +52,7 @@ class Color {
     let maxChroma = chroma;
     let bestColor = this.toClipped();
 
-    while (maxChroma - minChroma >= 0.0001) {
+    while (maxChroma - minChroma >= 0.01) {
       const chroma = (minChroma + maxChroma) / 2;
       bestColor = new Color(KoloroLCh, [lightness, chroma, hue]) //
         .to(this.colorspace);
@@ -67,7 +67,11 @@ class Color {
     return bestColor.toClipped();
   }
 
-  toClipped() {
+  toClipped(colorspace?: string | ColorSpace): Color {
+    if (colorspace) {
+      return this.to(colorspace).toClipped().to(this.colorspace);
+    }
+
     return new Color(this.colorspace, this.colorspace.toClipped(this.coords));
   }
 

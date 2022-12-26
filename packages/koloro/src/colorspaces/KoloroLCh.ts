@@ -8,7 +8,7 @@ const KoloroLCh = new ColorSpace({
 
   fromBase: ([L, a, b]) => {
     const C = Math.sqrt(a ** 2 + b ** 2);
-    if (C < 0.025) {
+    if (C < 0.01) {
       return [L, C, NaN];
     }
 
