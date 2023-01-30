@@ -24,6 +24,6 @@
   "devDependencies": {
     "@neetly/tsconfig": "^0.2.0",
     "buncho": "^6.0.5",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.5"
   }
 }
