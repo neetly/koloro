@@ -18,7 +18,7 @@
     "prepack": "run clean && run build && cp ../../LICENSE ."
   },
   "devDependencies": {
-    "@neetly/tsconfig": "^0.2.0",
+    "@neetly/tsconfig": "^0.3.0",
     "buncho": "^6.0.5",
     "typescript": "^5.0.2"
   }
