@@ -10,4 +10,4 @@ const VisuallyHidden = ({ children }: VisuallyHiddenProps) => {
   return <span className={styles.visuallyHidden}>{children}</span>;
 };
 
-export { type VisuallyHiddenProps, VisuallyHidden };
+export { VisuallyHidden, type VisuallyHiddenProps };

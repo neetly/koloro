@@ -25,4 +25,4 @@ const ColorView = ({ color }: ColorViewProps) => {
   );
 };
 
-export { type ColorViewProps, ColorView };
+export { ColorView, type ColorViewProps };

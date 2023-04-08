@@ -104,4 +104,4 @@ const getColorStops = (from: Color, to: Color, steps: number) => {
   return colors as readonly Color[];
 };
 
-export { type ColorPickerProps, ColorPicker };
+export { ColorPicker, type ColorPickerProps };

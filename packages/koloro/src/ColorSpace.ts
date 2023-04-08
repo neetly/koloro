@@ -70,4 +70,4 @@ class ColorSpace {
   }
 }
 
-export { type ColorSpaceSpec, ColorSpace };
+export { ColorSpace, type ColorSpaceSpec };

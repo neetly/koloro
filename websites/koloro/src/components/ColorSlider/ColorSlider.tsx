@@ -56,4 +56,4 @@ const ColorSlider = ({
   );
 };
 
-export { type ColorSliderProps, ColorSlider };
+export { ColorSlider, type ColorSliderProps };
