@@ -1654,7 +1654,7 @@ __metadata:
   resolution: "@koloro/website@workspace:websites/koloro"
   dependencies:
     "@neetly/tsconfig": "npm:^0.3.0"
-    "@types/react": "npm:^18.2.3"
+    "@types/react": "npm:^18.2.5"
     "@types/react-dom": "npm:^18.2.3"
     buncho: "npm:^6.1.0"
     koloro: "workspace:^"
@@ -2076,14 +2076,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^18.2.3":
-  version: 18.2.3
-  resolution: "@types/react@npm:18.2.3"
+"@types/react@npm:*, @types/react@npm:^18.2.5":
+  version: 18.2.5
+  resolution: "@types/react@npm:18.2.5"
   dependencies:
     "@types/prop-types": "npm:*"
     "@types/scheduler": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: 654c4dc8dcc22af41b0c412683749fb7db532e2ac12813888580bc6c350dc12abfb97c2f463c4a861be57496ab8ebea3f1f5c7239c38c104961eb61661e1b684
+  checksum: e187dfc6f325b8e9bd629e84d09047d4e428227b68c860a1d420856577684b07193e651198281776119e614894936e8d74e765bc01d11962d204708da85a9735
   languageName: node
   linkType: hard
 
