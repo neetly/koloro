@@ -14,7 +14,7 @@
     "clean": "buncho clean"
   },
   "dependencies": {
-    "@types/react": "^18.2.6",
+    "@types/react": "^18.2.8",
     "@types/react-dom": "^18.2.4",
     "koloro": "workspace:^",
     "react": "^18.2.0",
