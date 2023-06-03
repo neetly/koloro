@@ -23,7 +23,7 @@
     "@neetly/eslint-config": "^0.5.0",
     "@neetly/tsconfig": "^0.3.0",
     "@prettier/plugin-xml": "^2.2.0",
-    "eslint": "^8.41.0",
+    "eslint": "^8.42.0",
     "prettier": "^2.8.8",
     "typescript": "^5.1.3"
   },
