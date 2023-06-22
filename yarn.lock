@@ -1660,7 +1660,7 @@ __metadata:
     koloro: "workspace:^"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
-    react-router-dom: "npm:^6.12.1"
+    react-router-dom: "npm:^6.13.0"
     typescript: "npm:^5.1.3"
   languageName: unknown
   linkType: soft
@@ -7389,27 +7389,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router-dom@npm:^6.12.1":
-  version: 6.12.1
-  resolution: "react-router-dom@npm:6.12.1"
+"react-router-dom@npm:^6.13.0":
+  version: 6.13.0
+  resolution: "react-router-dom@npm:6.13.0"
   dependencies:
     "@remix-run/router": "npm:1.6.3"
-    react-router: "npm:6.12.1"
+    react-router: "npm:6.13.0"
   peerDependencies:
     react: ">=16.8"
     react-dom: ">=16.8"
-  checksum: 9c62fceab5d9d0d0f9ffa47fa9dad2fa28183c8f517b4ba98240b972bd5c25c620486b759cb9bac92cefad3db3071db40a017acefb64f4aca2bd13ea249ab859
+  checksum: a0e59207d146f8e93a25ef139ef14c888857e9feb0c8fcb73fc3c6bd42e777bb031c132d89a23b6b5ab27b5fa0e962a94e8ed2c95916e969ec97c890b89ce216
   languageName: node
   linkType: hard
 
-"react-router@npm:6.12.1":
-  version: 6.12.1
-  resolution: "react-router@npm:6.12.1"
+"react-router@npm:6.13.0":
+  version: 6.13.0
+  resolution: "react-router@npm:6.13.0"
   dependencies:
     "@remix-run/router": "npm:1.6.3"
   peerDependencies:
     react: ">=16.8"
-  checksum: 823deee9fbe64e95d1fdd34f225e9e08181572c3ef69be2b894d308ae7c5dd49e12509cc88d64185cacd9443a973cb7867bdadccdbf7544698012ea18fffda9b
+  checksum: cdf8ce2cb1ad40f2254648a8ec8f6ad6f9b8b5446bd6a52b95c39a66cf032f20f8d18ecdff99ad580ad4e9a14486decbeb5e4a1db879cd44b139ba4ed64e86ac
   languageName: node
   linkType: hard
 
