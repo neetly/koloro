@@ -1,5 +1,5 @@
 {
-  "trailingComma": "all",
+  "plugins": ["@prettier/plugin-xml"],
   "proseWrap": "always",
   "xmlWhitespaceSensitivity": "ignore"
 }
