@@ -1662,7 +1662,7 @@ __metadata:
   dependencies:
     "@neetly/tsconfig": "npm:^0.3.0"
     "@types/react": "npm:^18.2.17"
-    "@types/react-dom": "npm:^18.2.6"
+    "@types/react-dom": "npm:^18.2.7"
     buncho: "npm:^6.1.0"
     koloro: "workspace:^"
     react: "npm:^18.2.0"
@@ -2075,12 +2075,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^18.2.6":
-  version: 18.2.6
-  resolution: "@types/react-dom@npm:18.2.6"
+"@types/react-dom@npm:^18.2.7":
+  version: 18.2.7
+  resolution: "@types/react-dom@npm:18.2.7"
   dependencies:
     "@types/react": "npm:*"
-  checksum: ce2287c58c5d6dd0f2a0f56c65909ed1f5e00ca31132bf1d13d4b3723ab956ce4c7a28fef9fa583c0a49989eed0504cd38573115a5c8e96f7cf4d5dd2ae35251
+  checksum: 10c0/bd090f5e1b13765fbc191d9eb720dd152d26c20558221963009189c4636ce11e4c1c976e4cde4a74335f997a2be651af27d3727474a8091424101a83a71eebfb
   languageName: node
   linkType: hard
 
