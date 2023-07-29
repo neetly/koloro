@@ -1649,7 +1649,7 @@ __metadata:
   dependencies:
     "@neetly/eslint-config": "npm:^0.5.1"
     "@neetly/tsconfig": "npm:^0.3.0"
-    "@prettier/plugin-xml": "npm:^3.1.0"
+    "@prettier/plugin-xml": "npm:^3.1.1"
     eslint: "npm:^8.46.0"
     prettier: "npm:^3.0.0"
     typescript: "npm:^5.1.6"
@@ -1830,13 +1830,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@prettier/plugin-xml@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "@prettier/plugin-xml@npm:3.1.0"
+"@prettier/plugin-xml@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "@prettier/plugin-xml@npm:3.1.1"
   dependencies:
     "@xml-tools/parser": "npm:^1.0.11"
-    prettier: "npm:>=3.0.0"
-  checksum: 10c0/47a35c7bf119c5f6e481e414fa7b92af45b6b1f71522b4d3a487360c9e1e7c64dd6fbcbcc05c5f33e33c63610e7e2e9a87266c3938fc72c14219efeb560dfd5b
+  peerDependencies:
+    prettier: ^3.0.0
+  checksum: 10c0/d650148c5e5f1c1293837071e4114660e419d3043065ecee8e0ee3def93bff83b17ee00094dd5681f184718e964259e1eaaee03baabeb094ebf5239769b57994
   languageName: node
   linkType: hard
 
@@ -7237,7 +7238,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:>=3.0.0, prettier@npm:^3.0.0":
+"prettier@npm:^3.0.0":
   version: 3.0.0
   resolution: "prettier@npm:3.0.0"
   bin:
