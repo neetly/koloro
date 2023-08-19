@@ -13,11 +13,11 @@
   "license": "MIT",
   "scripts": {
     "start": "yarn workspace @koloro/website start",
-    "build": "yarn workspaces foreach --topological-dev run build",
-    "clean": "yarn workspaces foreach --topological-dev run clean",
+    "build": "yarn workspaces foreach --all --topological-dev run build",
+    "clean": "yarn workspaces foreach --all --topological-dev run clean",
     "lint": "eslint --max-warnings 0 . && prettier --check .",
     "lint:fix": "eslint --max-warnings 0 --fix . && prettier --write .",
-    "publish": "yarn workspaces foreach --no-private npm publish --tolerate-republish"
+    "publish": "yarn workspaces foreach --all --no-private npm publish --tolerate-republish"
   },
   "devDependencies": {
     "@neetly/eslint-config": "^0.5.1",
