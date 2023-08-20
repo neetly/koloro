@@ -20,7 +20,7 @@
     "publish": "yarn workspaces foreach --all --no-private npm publish --tolerate-republish"
   },
   "devDependencies": {
-    "@neetly/eslint-config": "^0.5.1",
+    "@neetly/eslint-config": "^0.6.0",
     "@neetly/tsconfig": "^0.3.0",
     "@prettier/plugin-xml": "^3.2.0",
     "eslint": "^8.47.0",
