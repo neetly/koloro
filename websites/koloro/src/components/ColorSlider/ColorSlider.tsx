@@ -1,10 +1,9 @@
 import type { Color } from "koloro";
-import type { ReactNode } from "react";
-import { useId } from "react";
+import { type ReactNode, useId } from "react";
 
 import styles from "./ColorSlider.module.scss";
 
-type ColorSliderProps = {
+interface ColorSliderProps {
   label: ReactNode;
   rule: { min: number; max: number; step: number };
   color: Color;
@@ -12,7 +11,7 @@ type ColorSliderProps = {
   value: number;
   valueText: ReactNode;
   onChange: (value: number) => void;
-};
+}
 
 const ColorSlider = ({
   label,
@@ -49,7 +48,9 @@ const ColorSlider = ({
           type="range"
           {...rule}
           value={value}
-          onChange={(event) => onChange(Number(event.target.value))}
+          onChange={(event) => {
+            onChange(Number(event.target.value));
+          }}
         />
       </div>
     </div>

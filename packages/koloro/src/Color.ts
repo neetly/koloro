@@ -23,7 +23,7 @@ class Color {
   }
 
   inGamut(colorspace?: string | ColorSpace): boolean {
-    if (colorspace) {
+    if (colorspace !== undefined) {
       return this.to(colorspace).inGamut();
     }
 
@@ -31,7 +31,7 @@ class Color {
   }
 
   toGamut(colorspace?: string | ColorSpace): Color {
-    if (colorspace) {
+    if (colorspace !== undefined) {
       return this.to(colorspace).toGamut().to(this.colorspace);
     }
 
@@ -68,7 +68,7 @@ class Color {
   }
 
   toClipped(colorspace?: string | ColorSpace): Color {
-    if (colorspace) {
+    if (colorspace !== undefined) {
       return this.to(colorspace).toClipped().to(this.colorspace);
     }
 

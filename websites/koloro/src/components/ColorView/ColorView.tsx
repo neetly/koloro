@@ -3,9 +3,9 @@ import type { Color } from "koloro";
 import { VisuallyHidden } from "../VisuallyHidden";
 import styles from "./ColorView.module.scss";
 
-type ColorViewProps = {
+interface ColorViewProps {
   color: Color;
-};
+}
 
 const ColorView = ({ color }: ColorViewProps) => {
   const value = color.toHex();

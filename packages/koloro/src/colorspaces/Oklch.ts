@@ -7,9 +7,9 @@ const Oklch = new ColorSpace({
   base: Oklab,
 
   fromBase: ([L, a, b]) => {
-    const C = Math.sqrt(a ** 2 + b ** 2);
+    const C = Math.hypot(a, b);
     if (C < 0.00004) {
-      return [L, C, NaN];
+      return [L, C, Number.NaN];
     }
 
     const h = Math.atan2(b, a) * (180 / Math.PI);

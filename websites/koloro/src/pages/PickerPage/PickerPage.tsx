@@ -18,9 +18,15 @@ const PickerPage = () => {
 
   const [lightness, chroma, hue] = color.coords;
 
-  useEffect(() => Storage.setItem("picker.lightness", lightness), [lightness]);
-  useEffect(() => Storage.setItem("picker.chroma", chroma), [chroma]);
-  useEffect(() => Theme.setHue(hue), [hue]);
+  useEffect(() => {
+    Storage.setItem("picker.lightness", lightness);
+  }, [lightness]);
+  useEffect(() => {
+    Storage.setItem("picker.chroma", chroma);
+  }, [chroma]);
+  useEffect(() => {
+    Theme.setHue(hue);
+  }, [hue]);
 
   return (
     <main className={styles.page}>

@@ -1,13 +1,13 @@
 import type { ColorCoords } from "./ColorCoords";
 
-type ColorSpaceSpec = {
+interface ColorSpaceSpec {
   id: string;
   inGamut?: (coords: ColorCoords) => boolean;
   toClipped?: (coords: ColorCoords) => ColorCoords;
   base?: ColorSpace;
   fromBase?: (coords: ColorCoords) => ColorCoords;
   toBase?: (coords: ColorCoords) => ColorCoords;
-};
+}
 
 class ColorSpace {
   readonly id: string;

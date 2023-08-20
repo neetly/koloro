@@ -2,7 +2,7 @@ const Storage = {
   getItem: <Value = unknown>(key: string) => {
     try {
       const value = localStorage.getItem(key);
-      if (value) {
+      if (value !== null) {
         return JSON.parse(value) as Value;
       }
     } catch {} // eslint-disable-line no-empty

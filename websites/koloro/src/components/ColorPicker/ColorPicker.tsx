@@ -4,10 +4,10 @@ import { useMemo } from "react";
 import { ColorSlider } from "../ColorSlider";
 import styles from "./ColorPicker.module.scss";
 
-type ColorPickerProps = {
+interface ColorPickerProps {
   color: Color;
   onColorChange: (color: Color) => void;
-};
+}
 
 const ColorPicker = ({ color, onColorChange }: ColorPickerProps) => {
   const [lightness, chroma, hue] = color.coords;

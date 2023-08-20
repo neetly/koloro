@@ -3,10 +3,10 @@ import { Link, Outlet, ScrollRestoration, useMatches } from "react-router-dom";
 
 import styles from "./App.module.scss";
 
-type Page = {
+interface Page {
   name: string;
   pathname: string;
-};
+}
 
 const App = () => {
   const matches = useMatches();
@@ -15,7 +15,7 @@ const App = () => {
     const pages: Page[] = [];
     for (const match of matches) {
       const name = getName(match.handle);
-      if (name) {
+      if (name !== undefined) {
         pages.push({
           name,
           pathname: match.pathname,
