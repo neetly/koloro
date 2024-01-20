@@ -7,8 +7,8 @@
     "rootDir": "./src",
     "outDir": "./lib",
 
-    "types": ["buncho/env"]
+    "types": ["buncho/env"],
   },
 
-  "references": [{ "path": "../../packages/koloro" }]
+  "references": [{ "path": "../../packages/koloro" }],
 }
