@@ -23,7 +23,7 @@
     "@neetly/eslint-config": "0.7.0",
     "@neetly/tsconfig": "0.3.0",
     "@prettier/plugin-xml": "3.3.1",
-    "eslint": "8.56.0",
+    "eslint": "8.57.0",
     "prettier": "3.2.4",
     "typescript": "5.3.3"
   },
